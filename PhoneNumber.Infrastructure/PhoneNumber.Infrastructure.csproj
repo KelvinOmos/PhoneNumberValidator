@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Seeds\**" />
+    <EmbeddedResource Remove="Seeds\**" />
+    <None Remove="Seeds\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PhoneNumber.Application\PhoneNumber.Application.csproj" />
+    <ProjectReference Include="..\PhoneNumber.Domain\PhoneNumber.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
